@@ -1,8 +1,5 @@
 <div class="row">
-	<div class="col-md-3">
-	</div>
-
-	<div class="col-md-6">
+	<div class="col-md-6 col-md-offset-3">
 		<%= form_for @contact do |f| %>
 		<div class="form-group">
 			<%= f.label :name %>
@@ -16,11 +13,9 @@
 			<%= f.label :comments %>
 			<%= f.text_area :comments, class: "form-control" %>
 		</div>
-	</div>
 
-	<div class="col-md-3">
+		<%= f.submit "Submit", class: 'btn btn-default btn-lg' %> 
 	</div>
-
 		<% end %>
 
 </div>
