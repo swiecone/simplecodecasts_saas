@@ -23,14 +23,8 @@ body {
 	background: linear-gradient(to left, #F09819 , #EDDE5D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.pink {
-	background-color: #ff75fc;
-}
-
-.blue {
-	background-color: #89acff;
-}
-
-.grey {
- 	background-color: #bfbfbf ;
+.alert-notice {
+	color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
 }
