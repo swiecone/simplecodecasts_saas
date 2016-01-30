@@ -9,13 +9,15 @@
 
 	<div class="col-md-6">
 		<div class="well">
-		<% if current_user.profile %>
 			<h2 class="text-cener"> Your Profile</h2>
+			<p> Edit or view your profile </p>
+			<% if current_user.profile %>
 			<%= link_to "Edit your profile", "#", class: 'btn btn-primary btn-block' %>
 		
 
 			<%= link_to "View your profile", user_path(current_user), class: 'btn btn-primary btn-block' %>
 		<% else %>
+			<p> Fill your profile so that you can share your information with the community. </p>
 			<%= link_to "Create your  profile", new_user_profile_path(current_user), class: 'btn btn-primary btn-block' %>
 		<% end %>
 		</div>
