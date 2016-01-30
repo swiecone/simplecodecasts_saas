@@ -1,26 +1,48 @@
-<%= link_to "Create your  profile", new_user_profile_path(current_user) if current_user %>
 
-<% if current_user %>
-	<h1> Welcome to Match Dev! </h1>
 <% else %>
 <div class="jumbotron text-center">
 	<h1>Welcome to Dev Match</h1> 
 	<h3>A membership development site for developers and entrepreneurs </h3>
 </div>
 <div class="row">
+	<% if user_signed_in? %>
+
 	<div class="col-md-6">
 		<div class="well">
-			<h2> Basic Membership </h2>
-			<h4> Sign up for free and get basic membership account.</h4>
-			<br>
-				<%= link_to "Sign up for free", new_user_registration_path(plan: @basic_plan.id) , class: 'btn btn-danger btn-lg btn-block' %>
+		<% if current_user.profile %>
+			<h2 class="text-cener"> Your Profile</h2>
+			<%= link_to "Edit your profile", "#", class: 'btn btn-primary btn-block' %>
+		
+
+			<%= link_to "View your profile", user_path(current_user), class: 'btn btn-primary btn-block' %>
+		<% else %>
+			<%= link_to "Create your  profile", new_user_profile_path(current_user), class: 'btn btn-primary btn-block' %>
+		<% end %>
 		</div>
 	</div>
 	<div class="col-md-6">
 		<div class="well">
-			<h2> Premium Membership </h2>
-			<h4> Sign up for Premium account for 10$/month and get community information </h4>
-				<%= link_to "Sign up for Pro", new_user_registration_path(plan: @premium_plan.id) , class: 'btn btn-primary btn-lg btn-block' %>
+			<h2 class="text-cener"> The Community </h2>
+			<p> Visit the community to meet other developers, entrepreneurs and investors! </p>
+				<%= link_to "Visit the community.", "#",  class: 'btn btn-primary btn-block' %>
 		</div>
 	</div>
-<% end %>
+
+	<% else %>
+		<div class="col-md-6">
+			<div class="well">
+				<h2> Basic Membership </h2>
+				<h4> Sign up for free and get basic membership account.</h4>
+				<br>
+					<%= link_to "Sign up for free", new_user_registration_path(plan: @basic_plan.id) , class: 'btn btn-danger btn-lg btn-block' %>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="well">
+				<h2> Premium Membership </h2>
+				<h4> Sign up for Premium account for 10$/month and get community information </h4>
+					<%= link_to "Sign up for Pro", new_user_registration_path(plan: @premium_plan.id) , class: 'btn btn-primary btn-lg btn-block' %>
+			</div>
+		<% end %>
+	</div>
+</div>
