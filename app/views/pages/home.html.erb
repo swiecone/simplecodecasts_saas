@@ -12,7 +12,7 @@
 			<h2 class="text-cener"> Your Profile</h2>
 			<p> Edit or view your profile </p>
 			<% if current_user.profile %>
-			<%= link_to "Edit your profile", "#", class: 'btn btn-primary btn-block' %>
+			<%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-primary btn-block' %>
 		
 
 			<%= link_to "View your profile", user_path(current_user), class: 'btn btn-primary btn-block' %>
