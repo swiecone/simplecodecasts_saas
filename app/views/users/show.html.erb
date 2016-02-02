@@ -5,27 +5,27 @@
 			</h1>
 </div>
 <div class="row">
-<div class="col-md-2 col-md-offset-2 text-cen">
-			<%= image_tag @user.profile.avatar.url %>
+<div class="col-md-2 col-md-offset-2 text-center">
+		<%= image_tag @user.profile.avatar.url, class: "user-avatar" %> 
 
 		</div>
-	<div class="col-md-6 well">
+	<div class="col-md-6 well user-profile">
 		
-		<div class="row">
+		<div class="row ">
 			<h3>
 			<span class="job-title-icon">
 				<%= job_title_icon %>
 			</span>
-			
 			<%= @user.profile.job_title %>
 			</h3>
 			<% if current_user.id == 2  %>
 			<p><%= @user.profile.phone_number %>
 			<%= @user.profile.contact_email %>
 			<% end %> </p>
-			<p><%= @user.profile.description %> </p>
-			<br>
-		</h4>
+			<div class="user-profile">
+				<p><%= @user.profile.description %> </p>
+			</div>
+
 		</div>
 	</div>
 </div>
