@@ -4,13 +4,31 @@
 	height: 35px;
 	border: 2px solid black;
 	border-radius: 4px;
-	background-color: #337ab7;
+	background-color: #870000;
 	color: white;
 	text-align: center;
 }
 
-.user-profile{
+#job-title {
+	color: #190A05;
+	text-align: center;
+}
+
+.user-gradient {
+	background: #780206; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #780206 , #061161); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #780206 , #061161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;    
+}
+
+.profile-block{
 	 color: #333;
+	h3 {
+	   	margin-top: 0px;
+	}
+}
+
+.user-profile.well{
 	 background-color: #85f8e5;
      border-color: #4cae4c;
 }
@@ -22,12 +40,9 @@
 
 }
 
-#job-title {
-	color: white;
-	text-align: center;
-}
-
 .white-left {
 	color: white;
 	text-align: left;	
+    font-style: italic;
+
 }
