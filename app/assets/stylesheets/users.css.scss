@@ -39,6 +39,8 @@
     border: 1px solid white;
     border-radius: 100px;
     box-shadow: -1px 9px 8px 0px rgba(255,255,255,1);
+    margin-top: 15px;
+    margin-bottom: 15px;
 
 }
 
@@ -46,5 +48,29 @@
 	color: white;
 	text-align: left;	
     font-style: italic;
+}
+
+#profile-detail-style {
+		color: #222;
 
 }
+
+#job-title-detail-style h4{
+	margin-top: 20px;
+	color: #000;
+
+}
+
+.background-white {
+	background-color: #f9f9f9;
+}
+
+.background-grey {
+	background-color: #b7b7b7;
+}
+
+.grey-text {
+	color: #222;
+}
+
+

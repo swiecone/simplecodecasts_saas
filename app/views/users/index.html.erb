@@ -1,0 +1,30 @@
+<h1 class="white-left"> Users of Dev Match </h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-1 white-left">
+		<% @users.each do |user| %>
+			<% if user.profile %>
+			<div class="well row <%= cycle('background-white', 'background-grey') %>">
+				<% if user.profile.avatar %>
+					<%= link_to user do %>
+						<div class="col-sm-5 ">
+							<%= image_tag user.profile.avatar.url, class: "user-avatar" %>  <br>
+						</div>
+					<% end %>
+				<% end %> 
+				<%= link_to user do %>
+				<div id="profile-detail-style"> 
+					<h2> <%=  user.profile.first_name %> <%=  user.profile.last_name %>
+					</h2>
+				</div>
+				<% end %> 
+					<div id="job-title-detail-style"> 
+						<h4> <%=  user.profile.job_title %> </h4>
+				    </div> 
+				</div>
+
+			
+			<% end %>	
+		<% end %> 
+	</div>	
+</div> 

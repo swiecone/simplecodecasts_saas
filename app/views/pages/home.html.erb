@@ -11,7 +11,10 @@
 		<div class="well">
 			<h2 class="text-cener"> Your Profile</h2>
 			<p> Edit or view your profile </p>
-			<% if current_user.profile %>
+	
+	<!-- If the current user is logged in then we present options to see profile or community -->
+
+	<% if current_user.profile %>
 			<%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-primary btn-block' %>
 		
 
@@ -26,9 +29,10 @@
 		<div class="well">
 			<h2 class="text-cener"> The Community </h2>
 			<p> Visit the community to meet other developers, entrepreneurs and investors! </p>
-				<%= link_to "Visit the community.", "#",  class: 'btn btn-primary btn-block' %>
+				<%= link_to "Visit the community.", users_path ,  class: 'btn btn-primary btn-block' %>
 		</div>
 	</div>
+
 
 	<% else %>
 		<div class="col-md-6">
