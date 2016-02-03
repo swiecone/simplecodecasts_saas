@@ -9,20 +9,22 @@
 		<%= image_tag @user.profile.avatar.url, class: "user-avatar" %> 
 
 		</div>
-	<div class="col-md-6 well user-profile">
+	<div class="col-md-6 ">
 		
-		<div class="row ">
-			<h3>
-			<span class="job-title-icon">
-				<%= job_title_icon %>
-			</span>
-			<%= @user.profile.job_title %>
+		<div>
+			<h3  class="row text-center">  
+				<span class="job-title-icon"> <%= job_title_icon %> </span>
+				 <span id="job-title"> <%= @user.profile.job_title %> </span>
 			</h3>
+		
 			<% if current_user.id == 2  %>
-			<p><%= @user.profile.phone_number %>
-			<%= @user.profile.contact_email %>
-			<% end %> </p>
-			<div class="user-profile">
+			<div class="white-left">
+				<h4><i class="fa fa-phone white-center"></i> <%= @user.profile.phone_number %> </h4>
+				<h5> <i class="fa fa-at white-center"></i><%= @user.profile.contact_email %> </h5>
+			</div>
+			<% end %> 
+
+			<div class="user-profile well user-profile">
 				<p><%= @user.profile.description %> </p>
 			</div>
 
