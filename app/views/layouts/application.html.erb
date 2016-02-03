@@ -27,12 +27,23 @@
       <% end %>
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+      
+
+
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
+        <% if user_signed_in? %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-danger navbar-btn' %>
         <% else %>
           <%= link_to "Log In", new_user_session_path, class: 'btn btn-success navbar-btn', method: :get %> 
         <% end %>
+
+
+        <% if user_signed_in? %>
+          <%= link_to "Community", users_path, class: 'btn btn-warning' %>
+          <%= link_to "My Account", edit_user_registration_path, class: 'btn btn-success' %>
+        <% end %> 
+
 
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact Us", new_contact_path %></li>

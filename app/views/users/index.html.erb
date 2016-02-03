@@ -19,7 +19,12 @@
 				</div>
 				<% end %> 
 					<div id="job-title-detail-style"> 
-						<h4> <%=  user.profile.job_title %> </h4>
+						<h4> <%=  user.profile.job_title %>
+							<% if user.plan_id == 2 %>
+							<span class="label label-danger">Premium</span></h6>
+							<% end %>
+
+						 </h4>
 				    </div> 
 				</div>
 
